@@ -228,25 +228,25 @@ function InteractiveProfileDemo() {
           </div>
         ))}
       </div>
-      <div className="flex gap-1 mb-5">
-        {([
-          ['reviews', 'Reviews'],
-          ['memorias', 'Memórias'],
-          ['recomendacoes', 'Recomendações'],
-        ] as const).map(([key, label]) => (
-          <button
-            key={key}
-            onClick={() => setTab(key)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-              tab === key
-                ? 'bg-ink-900 text-ink-50'
-                : 'text-ink-500 hover:text-ink-900 hover:bg-ink-100'
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
+<div className="flex items-center justify-between gap-1 mb-5 w-full">
+  {([
+    ['reviews', 'Reviews'],
+    ['memorias', 'Memórias'],
+    ['recomendacoes', 'Recomendações'],
+  ] as const).map(([key, label]) => (
+    <button
+      key={key}
+      onClick={() => setTab(key)}
+      className={`px-2 py-2 rounded-full text-[9px] font-medium transition-all duration-300 ${
+        tab === key
+          ? 'bg-ink-900 text-ink-50'
+          : 'text-ink-500 hover:text-ink-900 hover:bg-ink-100'
+      }`}
+    >
+      {label}
+    </button>
+  ))}
+</div>
       <div className="space-y-3">
         {content[tab].map((item) => (
           <motion.div
