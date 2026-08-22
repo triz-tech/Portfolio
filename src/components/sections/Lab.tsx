@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Coffee, MousePointerClick } from 'lucide-react';
-import SectionHeader from '@/components/SectionHeader';
+
 
 export default function Lab() {
   const [clicks, setClicks] = useState(0);
@@ -20,12 +20,7 @@ export default function Lab() {
   return (
     <section className="section-py border-t border-ink-100">
       <div className="container-px max-w-6xl mx-auto">
-        <SectionHeader
-          number="05"
-          label="LAB"
-          title="Algumas coisas que fiz só porque podia."
-          intro="Nem tudo precisa virar projeto. Às vezes eu só quero testar uma ideia, brincar com uma interface ou descobrir até onde consigo levar uma interação."
-        />
+
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Experiment 01 — Curiosity counter */}

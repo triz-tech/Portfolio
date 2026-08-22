@@ -1,15 +1,11 @@
-import SectionHeader from '@/components/SectionHeader';
+
 import { profileDetails } from '@/data/content';
 
 export default function About() {
   return (
     <section className="section-py border-t border-ink-100">
       <div className="container-px max-w-6xl mx-auto">
-        <SectionHeader
-          number="01"
-          label="SOBRE MIM"
-          title="Construindo minha trajetória em tecnologia."
-        />
+
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-10 lg:gap-16">
           {/* Story text */}
