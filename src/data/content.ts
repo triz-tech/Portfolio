@@ -132,6 +132,7 @@ export interface Project {
   status?: string;
   route?: string;
   link?: string;
+  linkLabel?: string;
   isPrivate?: boolean;
   isHere?: boolean;
   featured?: boolean;
@@ -174,6 +175,18 @@ export const projects: Project[] = [
     techs: ['React', 'TypeScript', 'Vite', 'CSS'],
     isHere: true,
   },
+
+  {
+  number: '05',
+  category: 'REAL PROJECT · FULL STACK',
+  title: 'Elias & Ezequiel',
+  description:
+    'Aplicação web desenvolvida para uma vaquinha real, com reserva automática de cotas, controle de disponibilidade, pagamento via Pix e painel administrativo integrado ao Supabase.',
+  techs: ['React', 'TypeScript', 'Supabase', 'PostgreSQL'],
+  status: 'PUBLICADO · EM USO',
+  link: 'https://cha-elias-ezequiel.vercel.app/',
+  linkLabel: 'Explorar projeto'
+},
 ];
 
 export const profileDetails = [

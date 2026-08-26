@@ -80,7 +80,7 @@ export default function ProjectCard({
 
         {(project.route || project.link) && (
           <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-900 group-hover:text-ink-700 transition-colors">
-            {project.route ? 'Explorar' : 'Ver no GitHub'}
+            {project.route ? 'Explorar' : project.linkLabel ?? 'Ver no GitHub'}
             <ArrowUpRight
               size={15}
               className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
