@@ -149,16 +149,17 @@ export const projects: Project[] = [
     route: '/flow',
     featured: true,
   },
-  {
-    number: '02',
-    category: 'PRODUCT CONCEPT · UX/UI · PROTOTYPE',
-    title: 'Mona',
-    description: 'Um conceito de produto social para transformar música em memória, descoberta e histórias compartilhadas.',
-    techs: ['UX/UI', 'Product', 'Prototype'],
-    status: 'CONCEPT / PROTOTYPE',
-    route: '/mona',
-    featured: true,
-  },
+{
+  number: '02',
+  category: 'PRODUCT · FULL STACK · SOCIAL',
+  title: 'AUX',
+  description:
+    'Uma rede social para transformar música em reviews, memórias e conversas. Do conceito ao produto publicado.',
+  techs: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL'],
+  status: 'LIVE PRODUCT · EM DESENVOLVIMENTO',
+  route: '/aux',
+  featured: true,
+},
   {
     number: '03',
     category: 'ACADEMIC PROJECT · WEB',

@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
 import Flow from '@/pages/Flow';
-import Mona from '@/pages/Mona';
+import Aux from '@/pages/AuxPage';
 import Projetos from '@/pages/Projetos';
 import Sobre from '@/pages/Sobre';
 import LabPage from '@/pages/LabPage';
@@ -64,7 +64,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/flow" element={<Flow />} />
-            <Route path="/mona" element={<Mona />} />
+            <Route path="/aux" element={<Aux />} />
             <Route path="/projetos" element={<Projetos />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/lab" element={<LabPage />} />
