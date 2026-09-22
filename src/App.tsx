@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import MaisUmApp from '@/pages/MaisUmApp';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
@@ -64,6 +65,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/lens" element={<Lens />} />
+            <Route path="/mais-um-app" element={<MaisUmApp />} />
             <Route path="/aux" element={<Aux />} />
             <Route path="/projetos" element={<Projetos />} />
             <Route path="/sobre" element={<Sobre />} />

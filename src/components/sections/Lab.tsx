@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Coffee, MousePointerClick } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
+import {
+  ArrowUpRight,
+  Coffee,
+  Globe2,
+  MousePointerClick,
+  Smartphone,
+} from 'lucide-react';
 
 export default function Lab() {
   const [clicks, setClicks] = useState(0);
@@ -15,14 +21,18 @@ export default function Lab() {
     '// git push --force com 80% de confiança',
     '// o bug não era um bug. era um feature.',
   ];
-  const [coffeeMsg] = useState(() => coffeeMessages[Math.floor(Math.random() * coffeeMessages.length)]);
+
+  const [coffeeMsg] = useState(
+    () =>
+      coffeeMessages[Math.floor(Math.random() * coffeeMessages.length)]
+  );
 
   return (
     <section className="section-py border-t border-ink-100">
       <div className="container-px max-w-6xl mx-auto">
 
-
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+
           {/* Experiment 01 — Curiosity counter */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -32,7 +42,11 @@ export default function Lab() {
             className="p-8 rounded-2xl border border-ink-200 bg-white"
           >
             <div className="flex items-center gap-2 mb-6">
-              <MousePointerClick size={16} className="text-ink-400" />
+              <MousePointerClick
+                size={16}
+                className="text-ink-400"
+              />
+
               <span className="font-mono text-[10px] uppercase tracking-widest text-ink-400">
                 EXPERIMENTO 01
               </span>
@@ -41,9 +55,10 @@ export default function Lab() {
             <h3 className="font-serif text-2xl font-medium text-ink-900 mb-3">
               Contador de curiosidade
             </h3>
+
             <p className="text-ink-500 text-sm leading-relaxed mb-8 text-pretty">
-              Não tem nenhuma função importante. Eu só queria saber quantas vezes você
-              clicaria.
+              Não tem nenhuma função importante. Eu só queria saber quantas
+              vezes você clicaria.
             </p>
 
             <div className="text-center py-6">
@@ -56,8 +71,11 @@ export default function Lab() {
               >
                 {clicks}
               </motion.span>
+
               <p className="font-mono text-xs text-ink-400 mt-2">
-                {clicks === 1 ? 'curiosidade acumulada' : 'curiosidades acumuladas'}
+                {clicks === 1
+                  ? 'curiosidade acumulada'
+                  : 'curiosidades acumuladas'}
               </p>
             </div>
 
@@ -79,11 +97,16 @@ export default function Lab() {
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">
-                <Coffee size={16} className="text-ink-400" />
+                <Coffee
+                  size={16}
+                  className="text-ink-400"
+                />
+
                 <span className="font-mono text-[10px] uppercase tracking-widest text-ink-400">
                   EXPERIMENTO 02
                 </span>
               </div>
+
               <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-ink-400">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500" />
                 ONLINE
@@ -99,9 +122,11 @@ export default function Lab() {
                 <p className="text-ink-500 text-sm leading-relaxed mb-8 text-pretty">
                   Prepare o café para desbloquear a conversa.
                 </p>
+
                 <button
                   onClick={() => {
                     setCoffeeGrinding(true);
+
                     setTimeout(() => {
                       setCoffeeGrinding(false);
                       setCoffeeReady(true);
@@ -123,13 +148,13 @@ export default function Lab() {
                 <p className="text-ink-500 text-sm leading-relaxed mb-6">
                   Café pronto. Aqui vai uma mensagem do sistema:
                 </p>
+
                 <pre className="font-mono text-sm text-ink-600 bg-ink-50 border border-ink-100 rounded-xl p-4 overflow-x-auto">
                   {coffeeMsg}
                 </pre>
+
                 <button
-                  onClick={() => {
-                    setCoffeeReady(false);
-                  }}
+                  onClick={() => setCoffeeReady(false)}
                   className="mt-4 text-xs font-mono text-ink-400 hover:text-ink-700 transition-colors"
                 >
                   ↻ fazer outro café
@@ -137,6 +162,88 @@ export default function Lab() {
               </motion.div>
             )}
           </motion.div>
+
+          {/* Experiment 03 — Mais um app? */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.45, delay: 0.12 }}
+            className="md:col-span-2"
+          >
+            <Link
+              to="/mais-um-app"
+              className="group block relative overflow-hidden rounded-[28px] bg-ink-950 text-white border border-ink-900 p-8 md:p-10 lg:p-12 transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-white/5 blur-3xl" />
+
+              <div className="relative">
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex items-center gap-2">
+                    <Smartphone
+                      size={16}
+                      className="text-white/40"
+                    />
+
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-white/40">
+                      EXPERIMENTO 03
+                    </span>
+                  </div>
+
+                  <span className="w-10 h-10 rounded-full border border-white/10 bg-white/5 grid place-items-center">
+                    <ArrowUpRight
+                      size={16}
+                      className="text-white/50 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+                    />
+                  </span>
+                </div>
+
+                <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1fr_.75fr] gap-10 lg:gap-16 items-end">
+                  <div>
+                    <span className="inline-flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.18em] text-white/35 mb-5">
+                      <Globe2 size={12} />
+                      PRODUCT THINKING · WEB · EXPERIMENT
+                    </span>
+
+                    <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[0.98] tracking-[-0.03em]">
+                      Mais um app?
+                    </h3>
+
+                    <p className="text-lg md:text-xl text-white/60 mt-5 max-w-xl leading-relaxed">
+                      Se eu só quero pedir uma pizza, por que preciso instalar
+                      mais um aplicativo?
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-white/45 leading-relaxed max-w-md">
+                      Uma crítica à ideia de transformar todo serviço digital
+                      em app e um experimento sobre atrito, hábito e o que a web
+                      ainda sabe fazer.
+                    </p>
+
+                    <div className="mt-8 flex items-center gap-2 text-sm font-medium">
+                      explorar manifesto
+
+                      <ArrowUpRight
+                        size={15}
+                        className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12 pt-6 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[9px] uppercase tracking-widest text-white/25">
+                  <span>web first</span>
+                  <span>pwa</span>
+                  <span>product thinking</span>
+                  <span>ux</span>
+                  <span>menos download</span>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
         </div>
       </div>
     </section>
