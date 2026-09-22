@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
-import Flow from '@/pages/Flow';
+import Lens from '@/pages/Lens';
 import Aux from '@/pages/AuxPage';
 import Projetos from '@/pages/Projetos';
 import Sobre from '@/pages/Sobre';
@@ -63,7 +63,7 @@ export default function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/flow" element={<Flow />} />
+            <Route path="/lens" element={<Lens />} />
             <Route path="/aux" element={<Aux />} />
             <Route path="/projetos" element={<Projetos />} />
             <Route path="/sobre" element={<Sobre />} />

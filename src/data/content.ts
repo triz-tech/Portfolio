@@ -140,15 +140,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    number: '01',
-    category: 'PRODUCT · DATA · SOFTWARE',
-    title: 'Flow',
-    description: 'Um projeto experimental de inteligência de dados aplicado ao transporte público.',
-    techs: ['React', 'Python', 'Data', 'Simulation'],
-    status: 'EM PESQUISA / MVP EM DESENVOLVIMENTO',
-    route: '/flow',
-    featured: true,
-  },
+  number: '01',
+  category: 'PRODUCT · SOFTWARE · MANAGEMENT',
+  title: 'Prumo',
+  description:
+    'Sistema de gestão pensado para negócios, conectando operação, estoque e presença digital em uma experiência simples e acessível.',
+  techs: ['Next.js', 'TypeScript', 'Supabase', 'Product'],
+  status: 'MVP PUBLICADO',
+  link: 'https://prumo-fawn-nine.vercel.app/',
+  linkLabel: 'Explorar',
+  featured: true,
+},
 {
   number: '02',
   category: 'PRODUCT · FULL STACK · SOCIAL',
@@ -187,6 +189,18 @@ export const projects: Project[] = [
   status: 'PUBLICADO · EM USO',
   link: 'https://cha-elias-ezequiel.vercel.app/',
   linkLabel: 'Explorar projeto'
+},
+
+{
+  number: '06',
+  category: 'EXPERIMENT · INTERACTIVE PORTFOLIO',
+  title: 'Lens',
+  description:
+    'Uma forma diferente de explorar meu trabalho. Escolha o que você procura e o portfólio encontra os projetos, tecnologias e experiências mais relevantes.',
+  techs: ['React', 'TypeScript', 'UX/UI', 'Interaction'],
+  status: 'EXPERIMENTO INTERATIVO',
+  route: '/lens',
+  featured: true,
 },
 ];
 
